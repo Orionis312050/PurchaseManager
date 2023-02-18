@@ -5,20 +5,11 @@
     <title>Création d'un article</title>
 </head>
 <body>
-
-Titre
-<input type="text">
-<br>
-
-Description
-<textarea></textarea>
-<br>
-
-Auteur
-<input type="text">
-<br>
-
-<input type="submit">
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Envoyer</button>
+</form>
 
 </body>
 </html>
