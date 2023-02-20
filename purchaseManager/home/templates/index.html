@@ -1,3 +1,14 @@
 <h1>Test</h1>
 
 <a href="./create">création d'un article</a>
+
+{% for article in articles %}
+<div>
+    <p>{{ article.title }}</p>
+
+    <p>{{ article.auth }}</p>
+
+    <p>{{ article.desc }}</p>
+</div>
+<br>
+{% endfor %}
