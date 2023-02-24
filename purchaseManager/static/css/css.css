@@ -1,3 +1,77 @@
 html {
-    background-color: #E0E0E0
+    background-color: #E0E0E0;
+}
+
+#block-depense {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid white;
+    border-radius: 20px 20px 20px 20px;
+    background-color: white;
+    width: 30%;
+}
+
+#total {
+    text-align: center;
+    font-size: 180%;
+    font-weight: 700;
+    margin-bottom: 13%;
+}
+
+#initial {
+    text-align: center;
+    font-size: 90%;
+    font-weight: 300;
+    margin-top: 13%;
+    margin-bottom: 5%;
+}
+
+#depenses_block {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.dep_block {
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-pack: left;
+    -moz-box-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: left;
+    -webkit-box-align: center;
+    height: auto;
+    width: 100%;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.dep_info {
+    /*display: inline-block;*/
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.dep_info_fonc1 {
+    /*display: inline-block;*/
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    margin-right: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.dep_info_fonc2 {
+    /*display: inline-block;*/
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    margin-right: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }

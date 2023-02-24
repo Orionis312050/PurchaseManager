@@ -1,23 +1,23 @@
 from django.shortcuts import render
-from .forms import ArtForm
-from .models import Article
+from .forms import DepForm
+from .models import Depense
 
 
 # Create your views here.
 
 def index(request):
-    articles = Article.objects.all()
-    return render(request, 'index.html', {'articles': articles})
+    depenses = Depense.objects.all()
+    return render(request, 'index.html', {'depenses': depenses})
 
 
 def create(request):
-    art = ArtForm()
+    dep = DepForm()
 
-    if art.is_valid():
-        title = art.cleaned_data('title')
-        desc = art.cleaned_data('desc')
-        auth = art.cleaned_data('auth')
-        article = Article(request.POST)
-        article.save()
+    if dep.is_valid():
+        title = dep.cleaned_data('title')
+        desc = dep.cleaned_data('desc')
+        quantity = dep.cleaned_data('quantity')
+        depense = Depense(request.POST)
+        depense.save()
 
-    return render(request, 'create.html', {'form': art})
+    return render(request, 'create.html', {'form': dep})

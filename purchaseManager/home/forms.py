@@ -1,7 +1,7 @@
 from django import forms
-from .models import Article
+from .models import Depense
 
-class ArtForm(forms.ModelForm):
+class DepForm(forms.ModelForm):
     class Meta:
-        model = Article
+        model = Depense
         fields = "__all__"

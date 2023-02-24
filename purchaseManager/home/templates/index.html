@@ -1,6 +1,7 @@
 {% load static %}
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="icon" href="https://zupimages.net/up/23/08/m6ns.png">
   <link rel="stylesheet" href="{% static 'css/css.css' %}">
     <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
@@ -66,16 +67,32 @@
 <body>
     <h1>Dépenses</h1>
 
-    <a href="./create">création d'un article</a>
-
-    {% for article in articles %}
-    <div>
-        <p>{{ article.title }}</p>
-
-        <p>{{ article.auth }}</p>
-
-        <p>{{ article.desc }}</p>
+    <div id="block-depense">
+        <p id="initial">Initial Number : 455 €</p>
+        <p id="total">255,86 €</p>
     </div>
-    <br>
-    {% endfor %}
+
+    <a href="./create">créer une dépense</a>
+
+    <div id="depenses_block">
+        <div id="fonction_dep">
+
+
+        </div>
+        {% for depense in depenses %}
+        <div class="dep_block">
+            <p class="dep_info">{{ depense.title }}</p>
+
+            <p class="dep_info">{{ depense.quantity }} euros</p>
+
+            <p class="dep_info">Date :{{ depense.date }}</p>
+
+            <p class="dep_info">{{ depense.desc }}</p>
+
+            <a href="#tuconnais"><span class="dep_info_fonc1" >modifier</span></a>
+
+            <a href="#tuconnais"><span class="dep_info_fonc2" >supp</span></a>
+        </div>
+        {% endfor %}
+    </div>
 </body>
