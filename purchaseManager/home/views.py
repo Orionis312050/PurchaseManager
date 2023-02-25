@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import DepForm
 from .models import Depense
 
@@ -11,13 +11,12 @@ def index(request):
 
 
 def create(request):
-    dep = DepForm()
 
-    if dep.is_valid():
-        title = dep.cleaned_data('title')
-        desc = dep.cleaned_data('desc')
-        quantity = dep.cleaned_data('quantity')
-        depense = Depense(request.POST)
-        depense.save()
+    if request.method == 'POST':
+        dep = DepForm(request.POST).save()
+        return redirect('./')
+
+    else:
+        dep = DepForm()
 
     return render(request, 'create.html', {'form': dep})

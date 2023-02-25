@@ -59,19 +59,13 @@ html {
 }
 
 .dep_info_fonc1 {
-    /*display: inline-block;*/
-    -moz-box-flex: 1;
-    -webkit-box-flex: 1;
-    margin-right: 2%;
-    margin-top: 1%;
-    margin-bottom: 1%;
 }
 
 .dep_info_fonc2 {
-    /*display: inline-block;*/
-    -moz-box-flex: 1;
-    -webkit-box-flex: 1;
-    margin-right: 2%;
-    margin-top: 1%;
-    margin-bottom: 1%;
+}
+
+.icon {
+
+    width: 2%;
+    height: 15px;
 }
